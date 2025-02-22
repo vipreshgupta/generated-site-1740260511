@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Foundation - Helping Those in Need</title>
+    <style>
+        :root {
+            --primary-blue: #007bff;
+            --primary-green: #28a745;
+            --accent-orange: #ffa500;
+            --accent-yellow: #ffd700;
+            --text-dark: #333;
+            --text-light: #f8f9fa;
+            --background-light: #ffffff;
+            --background-dark: #f1f3f5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-yellow);
+        }
+
+        .hero {
+            background-image: url('https://example.com/hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-orange);
+            color: var(--text-light);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-green);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-blue);
+        }
+
+        .mission {
+            background-color: var(--background-dark);
+        }
+
+        .mission-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mission-text {
+            flex: 1;
+            padding-right: 2rem;
+        }
+
+        .mission-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .mission-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .impact {
+            text-align: center;
+        }
+
+        .impact-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            background-color: var(--primary-green);
+            color: var(--text-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 30%;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .get-involved {
+            background-color: var(--background-dark);
+        }
+
+        .involvement-options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .involvement-option {
+            background-color: var(--text-light);
+            padding: 2rem;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .involvement-option h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-yellow);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mission-content, .impact-stats, .involvement-options {
+                flex-direction: column;
+            }
+
+            .mission-text, .mission-image, .stat, .involvement-option {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Hope Foundation</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#mission">Our Mission</a></li>
+                <li><a href="#impact">Our Impact</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Empowering Communities, Changing Lives</h1>
+                <p>Join us in our mission to create a better world for those in need.</p>
+                <a href="#get-involved" class="cta-button">Donate Now</a>
+            </div>
+        </section>
+
+        <section id="mission" class="section mission">
+            <div class="container">
+                <h2 class="section-title">Our Mission</h2>
+                <div class="mission-content">
+                    <div class="mission-text">
+                        <p>At Hope Foundation, we are dedicated to improving the lives of underprivileged communities through sustainable development programs, education initiatives, and healthcare support.</p>
+                        <p>Our goal is to empower individuals and communities to break the cycle of poverty and build a brighter future for generations to come.</p>
+                    </div>
+                    <div class="mission-image">
+                        <img src="https://example.com/mission-image.jpg" alt="Children in a classroom" width="400" height="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="section impact">
+            <div class="container">
+                <h2 class="section-title">Our Impact</h2>
+                <p>Through the generous support of our donors and volunteers, we've made a significant difference in the lives of many:</p>
+                <div class="impact-stats">
+                    <div class="stat">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-description">Children Educated</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5,000+</div>
+                        <div class="stat-description">Families Supported</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-description">Communities Reached</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-involved" class="section get-involved">
+            <div class="container">
+                <h2 class="section-title">Get Involved</h2>
+                <p>There are many ways you can contribute to our cause and make a difference:</p>
+                <div class="involvement-options">
+                    <div class="involvement-option">
+                        <h3>Donate</h3>
+                        <p>Your financial support helps us continue our vital work in communities around the world.</p>
+                        <a href="#" class="cta-button">Donate Now</a>
+                    </div>
+                    <div class="involvement-option">
+                        <h3>Volunteer</h3>
+                        <p>Join our team of dedicated volunteers and contribute your time and skills to our projects.</p>
+                        <a href="#" class="cta-button">Volunteer</a>
+                    </div>
+                    <div class="involvement-option">
+                        <h3>Spread the Word</h3>
+                        <p>Help us raise awareness by sharing our mission with your friends and family.</p>
+                        <a href="#" class="cta-button">Share</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hope Foundation. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple form validation for donation form (to be implemented)
+        function validateDonationForm() {
+            // Add form validation logic here
+            return true;
+        }
+
+        // Lazy loading for images (to be implemented)
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("lazy");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
